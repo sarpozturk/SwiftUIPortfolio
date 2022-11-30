@@ -13,6 +13,8 @@
 		37C8FD3C2937608000648DB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C8FD3B2937608000648DB0 /* Preview Assets.xcassets */; };
 		37C8FD442937615100648DB0 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD422937615100648DB0 /* Main.xcdatamodeld */; };
 		37C8FD462937649100648DB0 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD452937649100648DB0 /* DataController.swift */; };
+		37C8FD4829376AD400648DB0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD4729376AD400648DB0 /* HomeView.swift */; };
+		37C8FD4A29376AF000648DB0 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD4929376AF000648DB0 /* ProjectsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		37C8FD3B2937608000648DB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37C8FD432937615100648DB0 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		37C8FD452937649100648DB0 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		37C8FD4729376AD400648DB0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		37C8FD4929376AF000648DB0 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				37C8FD3A2937608000648DB0 /* Preview Content */,
 				37C8FD422937615100648DB0 /* Main.xcdatamodeld */,
 				37C8FD452937649100648DB0 /* DataController.swift */,
+				37C8FD4729376AD400648DB0 /* HomeView.swift */,
+				37C8FD4929376AF000648DB0 /* ProjectsView.swift */,
 			);
 			path = SwiftUIPortfolio;
 			sourceTree = "<group>";
@@ -143,9 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C8FD4A29376AF000648DB0 /* ProjectsView.swift in Sources */,
 				37C8FD442937615100648DB0 /* Main.xcdatamodeld in Sources */,
 				37C8FD462937649100648DB0 /* DataController.swift in Sources */,
 				37C8FD372937607F00648DB0 /* ContentView.swift in Sources */,
+				37C8FD4829376AD400648DB0 /* HomeView.swift in Sources */,
 				37C8FD352937607F00648DB0 /* SwiftUIPortfolioApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
