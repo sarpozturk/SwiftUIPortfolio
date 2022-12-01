@@ -12,7 +12,7 @@ struct ItemRowView: View {
     
     var body: some View {
         NavigationLink {
-            EmptyView()
+            EditItemView(item: item)
         } label: {
             Text("\(item.itemTitle)")
         }

@@ -18,6 +18,8 @@
 		37C8FD4C2938B48300648DB0 /* Project-CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD4B2938B48300648DB0 /* Project-CoreDataHelper.swift */; };
 		37C8FD4E2938B5D400648DB0 /* Item-CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD4D2938B5D400648DB0 /* Item-CoreDataHelper.swift */; };
 		37C8FD502938B76700648DB0 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD4F2938B76700648DB0 /* ItemRowView.swift */; };
+		37C8FD522938B8B100648DB0 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD512938B8B100648DB0 /* EditItemView.swift */; };
+		37C8FD542938BF1200648DB0 /* Binding-OnCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD532938BF1200648DB0 /* Binding-OnCreate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		37C8FD4B2938B48300648DB0 /* Project-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelper.swift"; sourceTree = "<group>"; };
 		37C8FD4D2938B5D400648DB0 /* Item-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelper.swift"; sourceTree = "<group>"; };
 		37C8FD4F2938B76700648DB0 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
+		37C8FD512938B8B100648DB0 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
+		37C8FD532938BF1200648DB0 /* Binding-OnCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnCreate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				37C8FD4B2938B48300648DB0 /* Project-CoreDataHelper.swift */,
 				37C8FD4D2938B5D400648DB0 /* Item-CoreDataHelper.swift */,
 				37C8FD4F2938B76700648DB0 /* ItemRowView.swift */,
+				37C8FD512938B8B100648DB0 /* EditItemView.swift */,
+				37C8FD532938BF1200648DB0 /* Binding-OnCreate.swift */,
 			);
 			path = SwiftUIPortfolio;
 			sourceTree = "<group>";
@@ -162,9 +168,11 @@
 				37C8FD442937615100648DB0 /* Main.xcdatamodeld in Sources */,
 				37C8FD502938B76700648DB0 /* ItemRowView.swift in Sources */,
 				37C8FD462937649100648DB0 /* DataController.swift in Sources */,
+				37C8FD542938BF1200648DB0 /* Binding-OnCreate.swift in Sources */,
 				37C8FD4E2938B5D400648DB0 /* Item-CoreDataHelper.swift in Sources */,
 				37C8FD4C2938B48300648DB0 /* Project-CoreDataHelper.swift in Sources */,
 				37C8FD372937607F00648DB0 /* ContentView.swift in Sources */,
+				37C8FD522938B8B100648DB0 /* EditItemView.swift in Sources */,
 				37C8FD4829376AD400648DB0 /* HomeView.swift in Sources */,
 				37C8FD352937607F00648DB0 /* SwiftUIPortfolioApp.swift in Sources */,
 			);
