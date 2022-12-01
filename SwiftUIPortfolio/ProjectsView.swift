@@ -28,10 +28,18 @@ struct ProjectsView: View {
                         ForEach(project.projectItems) { item in
                             ItemRowView(item: item)
                         }
+                        .onDelete { offSets in
+                            for offSet in offSets {
+                                let item = project.projectItems[offSet]
+                                dataController.delete(item)
+                            }
+                            dataController.save()
+                        }
                     }
                 }
             }
             .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
+            .listStyle(.insetGrouped)
         }
     }
 }
