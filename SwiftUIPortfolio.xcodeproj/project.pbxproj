@@ -22,6 +22,7 @@
 		37C8FD542938BF1200648DB0 /* Binding-OnCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD532938BF1200648DB0 /* Binding-OnCreate.swift */; };
 		37C8FD562939503200648DB0 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD552939503200648DB0 /* ProjectHeaderView.swift */; };
 		37C8FD582939583C00648DB0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C8FD572939583C00648DB0 /* Colors.xcassets */; };
+		37C8FD5A2939597300648DB0 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD592939597300648DB0 /* EditProjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		37C8FD532938BF1200648DB0 /* Binding-OnCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnCreate.swift"; sourceTree = "<group>"; };
 		37C8FD552939503200648DB0 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		37C8FD572939583C00648DB0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		37C8FD592939597300648DB0 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				37C8FD4F2938B76700648DB0 /* ItemRowView.swift */,
 				37C8FD512938B8B100648DB0 /* EditItemView.swift */,
 				37C8FD532938BF1200648DB0 /* Binding-OnCreate.swift */,
+				37C8FD592939597300648DB0 /* EditProjectView.swift */,
 			);
 			path = SwiftUIPortfolio;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				37C8FD562939503200648DB0 /* ProjectHeaderView.swift in Sources */,
 				37C8FD442937615100648DB0 /* Main.xcdatamodeld in Sources */,
 				37C8FD502938B76700648DB0 /* ItemRowView.swift in Sources */,
+				37C8FD5A2939597300648DB0 /* EditProjectView.swift in Sources */,
 				37C8FD462937649100648DB0 /* DataController.swift in Sources */,
 				37C8FD542938BF1200648DB0 /* Binding-OnCreate.swift in Sources */,
 				37C8FD4E2938B5D400648DB0 /* Item-CoreDataHelper.swift in Sources */,
