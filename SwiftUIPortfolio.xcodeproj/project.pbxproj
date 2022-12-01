@@ -20,6 +20,7 @@
 		37C8FD502938B76700648DB0 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD4F2938B76700648DB0 /* ItemRowView.swift */; };
 		37C8FD522938B8B100648DB0 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD512938B8B100648DB0 /* EditItemView.swift */; };
 		37C8FD542938BF1200648DB0 /* Binding-OnCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD532938BF1200648DB0 /* Binding-OnCreate.swift */; };
+		37C8FD562939503200648DB0 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD552939503200648DB0 /* ProjectHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		37C8FD4F2938B76700648DB0 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		37C8FD512938B8B100648DB0 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		37C8FD532938BF1200648DB0 /* Binding-OnCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnCreate.swift"; sourceTree = "<group>"; };
+		37C8FD552939503200648DB0 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				37C8FD342937607F00648DB0 /* SwiftUIPortfolioApp.swift */,
+				37C8FD552939503200648DB0 /* ProjectHeaderView.swift */,
 				37C8FD362937607F00648DB0 /* ContentView.swift */,
 				37C8FD382937608000648DB0 /* Assets.xcassets */,
 				37C8FD3A2937608000648DB0 /* Preview Content */,
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37C8FD4A29376AF000648DB0 /* ProjectsView.swift in Sources */,
+				37C8FD562939503200648DB0 /* ProjectHeaderView.swift in Sources */,
 				37C8FD442937615100648DB0 /* Main.xcdatamodeld in Sources */,
 				37C8FD502938B76700648DB0 /* ItemRowView.swift in Sources */,
 				37C8FD462937649100648DB0 /* DataController.swift in Sources */,
