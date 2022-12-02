@@ -16,6 +16,9 @@ struct ProjectsView: View {
     @EnvironmentObject private var dataController: DataController
     @Environment(\.managedObjectContext) var managedObjectContext
     
+    @State private var showSortActionSheet: Bool = false
+    @State private var sortOder: Item.SortOrder = .optimized
+    
     init(showClosedProjects: Bool) {
         self.showClosedProjects = showClosedProjects
         self.projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)], predicate: NSPredicate(format: "closed=%d", showClosedProjects))
@@ -26,12 +29,13 @@ struct ProjectsView: View {
             List {
                 ForEach(projects.wrappedValue) { project in
                     Section(header: ProjectHeaderView(project: project)) {
-                        ForEach(project.projectItems) { item in
+                        ForEach(items(for: project)) { item in
                             ItemRowView(item: item)
                         }
                         .onDelete { offSets in
+                            let allItems = items(for: project)
                             for offSet in offSets {
-                                let item = project.projectItems[offSet]
+                                let item = allItems[offSet]
                                 dataController.delete(item)
                             }
                             dataController.save()
@@ -53,6 +57,15 @@ struct ProjectsView: View {
             .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
             .listStyle(.insetGrouped)
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        showSortActionSheet.toggle()
+                    } label: {
+                        Image(systemName: "arrow.up.arrow.down")
+                    }
+                }
+                
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     if showClosedProjects == false {
                         Button {
@@ -65,6 +78,34 @@ struct ProjectsView: View {
                         }
                     }
                 }
+            }
+            .actionSheet(isPresented: $showSortActionSheet) {
+                ActionSheet(title: Text("Sort Items"), message: nil, buttons: [
+                    .default(Text("Optimized")) {
+                        sortOder = .optimized
+                    },
+                    .default(Text("Creation Date")) {
+                        sortOder = .creationDate
+                    },
+                    .default(Text("Title")) {
+                        sortOder = .title
+                    }
+                ])
+            }
+        }
+    }
+    
+    func items(for project: Project) -> [Item] {
+        switch sortOder {
+        case .optimized:
+            return project.projectItemsDefaultSorted
+        case .creationDate:
+            return project.projectItems.sorted { item1, item2 in
+                item1.itemCreationDate < item2.itemCreationDate
+            }
+        case .title:
+            return project.projectItems.sorted { item1, item2 in
+                item1.itemTitle < item2.itemTitle
             }
         }
     }

@@ -35,8 +35,11 @@ extension Project {
     }
     
     var projectItems: [Item] {
-        let items = items?.allObjects as? [Item] ?? []
-        return items.sorted { first, second in
+        return items?.allObjects as? [Item] ?? []
+    }
+    
+    var projectItemsDefaultSorted: [Item] {
+        projectItems.sorted { first, second in
             if first.completed == false {
                 if second.completed == true {
                     return true
