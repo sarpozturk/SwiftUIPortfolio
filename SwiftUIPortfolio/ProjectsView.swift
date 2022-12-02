@@ -14,6 +14,7 @@ struct ProjectsView: View {
     let showClosedProjects: Bool
     
     @EnvironmentObject private var dataController: DataController
+    @Environment(\.managedObjectContext) var managedObjectContext
     
     init(showClosedProjects: Bool) {
         self.showClosedProjects = showClosedProjects
@@ -35,11 +36,36 @@ struct ProjectsView: View {
                             }
                             dataController.save()
                         }
+                        
+                        if showClosedProjects == false {
+                            Button {
+                                let item = Item(context: managedObjectContext)
+                                item.project = project
+                                item.creationDate = Date()
+                                dataController.save()
+                            } label: {
+                                Label("Add Item", systemImage: "plus")
+                            }
+                        }
                     }
                 }
             }
             .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
             .listStyle(.insetGrouped)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    if showClosedProjects == false {
+                        Button {
+                            let project = Project(context: managedObjectContext)
+                            project.closed = false
+                            project.creationDate = Date()
+                            dataController.save()
+                        } label: {
+                            Image(systemName: "plus")
+                        }
+                    }
+                }
+            }
         }
     }
 }
