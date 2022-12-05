@@ -10,6 +10,10 @@ import SwiftUI
 struct AwardsView: View {
     static let tag: String? = "Awards"
     
+    @EnvironmentObject var dataController: DataController
+    @State private var selectedAward = Award.example
+    @State private var showingAwardAlert = false
+    
     var columns: [GridItem] {
         return [GridItem(.adaptive(minimum: 100, maximum: 100))]
     }
@@ -19,16 +23,29 @@ struct AwardsView: View {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(Award.allAwards) { award in
-                        Image(systemName: award.image)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                            .padding()
-                            .foregroundColor(.secondary.opacity(0.5))
+                        Button {
+                            selectedAward = award
+                            showingAwardAlert.toggle()
+                        } label: {
+                            Image(systemName: award.image)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
+                                .padding()
+                                .foregroundColor(dataController.hasEarnedAward(award) ? Color(award.color) : .secondary.opacity(0.5))
+                        }
                     }
                 }
             }
             .navigationTitle("Awards")
+        }
+        .alert(isPresented: $showingAwardAlert) {
+            if dataController.hasEarnedAward(selectedAward) {
+                return Alert(title: Text("Unlocked: \(selectedAward.name)"), message: Text(selectedAward.description), dismissButton: .default(Text("OK")))
+            }
+            else {
+                return Alert(title: Text("Locked: \(selectedAward.name)"), message: Text(selectedAward.description), dismissButton: .default(Text("OK")))
+            }
         }
     }
 }
