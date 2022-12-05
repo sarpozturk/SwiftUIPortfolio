@@ -27,6 +27,7 @@
 		37C8FD5E293B997D00648DB0 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 37C8FD5D293B997D00648DB0 /* Awards.json */; };
 		37C8FD60293B9AA500648DB0 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD5F293B9AA500648DB0 /* Award.swift */; };
 		37C8FD62293B9C0500648DB0 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD61293B9C0500648DB0 /* AwardsView.swift */; };
+		37C8FD64293E079500648DB0 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD63293E079500648DB0 /* Color-Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		37C8FD5D293B997D00648DB0 /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
 		37C8FD5F293B9AA500648DB0 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		37C8FD61293B9C0500648DB0 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
+		37C8FD63293E079500648DB0 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				37C8FD422937615100648DB0 /* Main.xcdatamodeld */,
 				37C8FD452937649100648DB0 /* DataController.swift */,
 				37C8FD4729376AD400648DB0 /* HomeView.swift */,
+				37C8FD63293E079500648DB0 /* Color-Additions.swift */,
 				37C8FD4929376AF000648DB0 /* ProjectsView.swift */,
 				37C8FD4B2938B48300648DB0 /* Project-CoreDataHelper.swift */,
 				37C8FD4D2938B5D400648DB0 /* Item-CoreDataHelper.swift */,
@@ -193,6 +196,7 @@
 				37C8FD502938B76700648DB0 /* ItemRowView.swift in Sources */,
 				37C8FD5A2939597300648DB0 /* EditProjectView.swift in Sources */,
 				37C8FD5C293B92EF00648DB0 /* Bundle-Decodable.swift in Sources */,
+				37C8FD64293E079500648DB0 /* Color-Additions.swift in Sources */,
 				37C8FD462937649100648DB0 /* DataController.swift in Sources */,
 				37C8FD542938BF1200648DB0 /* Binding-OnCreate.swift in Sources */,
 				37C8FD62293B9C0500648DB0 /* AwardsView.swift in Sources */,
