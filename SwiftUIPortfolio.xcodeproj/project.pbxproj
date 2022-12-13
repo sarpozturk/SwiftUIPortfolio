@@ -30,6 +30,8 @@
 		37C8FD64293E079500648DB0 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD63293E079500648DB0 /* Color-Additions.swift */; };
 		37C8FD692948966100648DB0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37C8FD6B2948966100648DB0 /* Localizable.strings */; };
 		37C8FD6D294898EB00648DB0 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 37C8FD6F294898EB00648DB0 /* Localizable.stringsdict */; };
+		37C8FD722948B96C00648DB0 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD712948B96C00648DB0 /* ItemListView.swift */; };
+		37C8FD742948BA3C00648DB0 /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD732948BA3C00648DB0 /* ProjectSummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		37C8FD6C2948966900648DB0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		37C8FD6E294898EB00648DB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		37C8FD70294898EF00648DB0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = tr; path = tr.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		37C8FD712948B96C00648DB0 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		37C8FD732948BA3C00648DB0 /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				37C8FD422937615100648DB0 /* Main.xcdatamodeld */,
 				37C8FD452937649100648DB0 /* DataController.swift */,
 				37C8FD4729376AD400648DB0 /* HomeView.swift */,
+				37C8FD732948BA3C00648DB0 /* ProjectSummaryView.swift */,
+				37C8FD712948B96C00648DB0 /* ItemListView.swift */,
 				37C8FD6B2948966100648DB0 /* Localizable.strings */,
 				37C8FD6F294898EB00648DB0 /* Localizable.stringsdict */,
 				37C8FD63293E079500648DB0 /* Color-Additions.swift */,
@@ -209,11 +215,13 @@
 				37C8FD5C293B92EF00648DB0 /* Bundle-Decodable.swift in Sources */,
 				37C8FD64293E079500648DB0 /* Color-Additions.swift in Sources */,
 				37C8FD462937649100648DB0 /* DataController.swift in Sources */,
+				37C8FD742948BA3C00648DB0 /* ProjectSummaryView.swift in Sources */,
 				37C8FD542938BF1200648DB0 /* Binding-OnCreate.swift in Sources */,
 				37C8FD62293B9C0500648DB0 /* AwardsView.swift in Sources */,
 				37C8FD4E2938B5D400648DB0 /* Item-CoreDataHelper.swift in Sources */,
 				37C8FD4C2938B48300648DB0 /* Project-CoreDataHelper.swift in Sources */,
 				37C8FD372937607F00648DB0 /* ContentView.swift in Sources */,
+				37C8FD722948B96C00648DB0 /* ItemListView.swift in Sources */,
 				37C8FD522938B8B100648DB0 /* EditItemView.swift in Sources */,
 				37C8FD4829376AD400648DB0 /* HomeView.swift in Sources */,
 				37C8FD60293B9AA500648DB0 /* Award.swift in Sources */,
