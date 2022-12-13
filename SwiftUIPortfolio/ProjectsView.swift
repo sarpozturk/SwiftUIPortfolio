@@ -48,7 +48,7 @@ struct ProjectsView: View {
                                 item.creationDate = Date()
                                 dataController.save()
                             } label: {
-                                Label("Add Item", systemImage: "plus")
+                                Label("Add New Item", systemImage: "plus")
                             }
                         }
                     }
