@@ -95,31 +95,16 @@
 		37C8FD332937607F00648DB0 /* SwiftUIPortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				37C8FD7D294E1BAC00648DB0 /* Screens */,
+				37C8FD7C294E124200648DB0 /* Configuration */,
+				37C8FD7B294E123800648DB0 /* Localization */,
+				37C8FD7A294E122E00648DB0 /* Extensions */,
 				37C8FD342937607F00648DB0 /* SwiftUIPortfolioApp.swift */,
-				37C8FD552939503200648DB0 /* ProjectHeaderView.swift */,
 				37C8FD362937607F00648DB0 /* ContentView.swift */,
+				37C8FD452937649100648DB0 /* DataController.swift */,
 				37C8FD382937608000648DB0 /* Assets.xcassets */,
 				37C8FD572939583C00648DB0 /* Colors.xcassets */,
 				37C8FD3A2937608000648DB0 /* Preview Content */,
-				37C8FD422937615100648DB0 /* Main.xcdatamodeld */,
-				37C8FD452937649100648DB0 /* DataController.swift */,
-				37C8FD4729376AD400648DB0 /* HomeView.swift */,
-				37C8FD732948BA3C00648DB0 /* ProjectSummaryView.swift */,
-				37C8FD712948B96C00648DB0 /* ItemListView.swift */,
-				37C8FD6B2948966100648DB0 /* Localizable.strings */,
-				37C8FD6F294898EB00648DB0 /* Localizable.stringsdict */,
-				37C8FD63293E079500648DB0 /* Color-Additions.swift */,
-				37C8FD4929376AF000648DB0 /* ProjectsView.swift */,
-				37C8FD4B2938B48300648DB0 /* Project-CoreDataHelper.swift */,
-				37C8FD4D2938B5D400648DB0 /* Item-CoreDataHelper.swift */,
-				37C8FD4F2938B76700648DB0 /* ItemRowView.swift */,
-				37C8FD512938B8B100648DB0 /* EditItemView.swift */,
-				37C8FD532938BF1200648DB0 /* Binding-OnCreate.swift */,
-				37C8FD592939597300648DB0 /* EditProjectView.swift */,
-				37C8FD5B293B92EF00648DB0 /* Bundle-Decodable.swift */,
-				37C8FD5D293B997D00648DB0 /* Awards.json */,
-				37C8FD5F293B9AA500648DB0 /* Award.swift */,
-				37C8FD61293B9C0500648DB0 /* AwardsView.swift */,
 			);
 			path = SwiftUIPortfolio;
 			sourceTree = "<group>";
@@ -130,6 +115,77 @@
 				37C8FD3B2937608000648DB0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		37C8FD7A294E122E00648DB0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				37C8FD4B2938B48300648DB0 /* Project-CoreDataHelper.swift */,
+				37C8FD4D2938B5D400648DB0 /* Item-CoreDataHelper.swift */,
+				37C8FD5B293B92EF00648DB0 /* Bundle-Decodable.swift */,
+				37C8FD532938BF1200648DB0 /* Binding-OnCreate.swift */,
+				37C8FD63293E079500648DB0 /* Color-Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37C8FD7B294E123800648DB0 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				37C8FD6F294898EB00648DB0 /* Localizable.stringsdict */,
+				37C8FD6B2948966100648DB0 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		37C8FD7C294E124200648DB0 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				37C8FD422937615100648DB0 /* Main.xcdatamodeld */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		37C8FD7D294E1BAC00648DB0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				37C8FD80294E1BC000648DB0 /* Awards */,
+				37C8FD7F294E1BB900648DB0 /* Projects */,
+				37C8FD7E294E1BB300648DB0 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		37C8FD7E294E1BB300648DB0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				37C8FD4729376AD400648DB0 /* HomeView.swift */,
+				37C8FD712948B96C00648DB0 /* ItemListView.swift */,
+				37C8FD732948BA3C00648DB0 /* ProjectSummaryView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		37C8FD7F294E1BB900648DB0 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				37C8FD4929376AF000648DB0 /* ProjectsView.swift */,
+				37C8FD552939503200648DB0 /* ProjectHeaderView.swift */,
+				37C8FD592939597300648DB0 /* EditProjectView.swift */,
+				37C8FD512938B8B100648DB0 /* EditItemView.swift */,
+				37C8FD4F2938B76700648DB0 /* ItemRowView.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		37C8FD80294E1BC000648DB0 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				37C8FD61293B9C0500648DB0 /* AwardsView.swift */,
+				37C8FD5F293B9AA500648DB0 /* Award.swift */,
+				37C8FD5D293B997D00648DB0 /* Awards.json */,
+			);
+			path = Awards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
