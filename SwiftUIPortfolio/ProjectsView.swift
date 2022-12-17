@@ -12,18 +12,23 @@ struct ProjectsView: View {
     static let closedTag: String? = "Closed"
     let projects: FetchRequest<Project>
     let showClosedProjects: Bool
-    
+
     @EnvironmentObject private var dataController: DataController
     @Environment(\.managedObjectContext) var managedObjectContext
-    
+
     @State private var showSortActionSheet: Bool = false
     @State private var sortOder: Item.SortOrder = .optimized
-    
+
     init(showClosedProjects: Bool) {
         self.showClosedProjects = showClosedProjects
-        self.projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)], predicate: NSPredicate(format: "closed=%d", showClosedProjects))
+        self.projects = FetchRequest<Project>(
+            entity: Project.entity(),
+            sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)],
+            predicate: NSPredicate(format: "closed=%d",
+                                   showClosedProjects)
+        )
     }
-    
+
     var projectsList: some View {
         List {
             ForEach(projects.wrappedValue) { project in
@@ -47,7 +52,7 @@ struct ProjectsView: View {
         }
         .listStyle(.insetGrouped)
     }
-    
+
     var addProjectToolbarItem: some ToolbarContent {
         ToolbarItem(placement: .navigationBarTrailing) {
             if showClosedProjects == false {
@@ -57,7 +62,7 @@ struct ProjectsView: View {
             }
         }
     }
-    
+
     var sortOrderToolbarItem: some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
             Button {
@@ -67,15 +72,14 @@ struct ProjectsView: View {
             }
         }
     }
-    
+
     var body: some View {
         NavigationView {
-            Group{
+            Group {
                 if projects.wrappedValue.isEmpty {
                     Text("There's nothing here right now")
                         .foregroundColor(.secondary)
-                }
-                else {
+                } else {
                     projectsList
                 }
             }
@@ -99,7 +103,7 @@ struct ProjectsView: View {
             }
         }
     }
-    
+
     func delete(_ offSets: IndexSet, for project: Project) {
         let allItems = items(for: project)
         for offSet in offSets {
@@ -108,21 +112,21 @@ struct ProjectsView: View {
         }
         dataController.save()
     }
-    
+
     func addItem(to project: Project) {
         let item = Item(context: managedObjectContext)
         item.project = project
         item.creationDate = Date()
         dataController.save()
     }
-    
+
     func addProject() {
         let project = Project(context: managedObjectContext)
         project.closed = false
         project.creationDate = Date()
         dataController.save()
     }
-    
+
     func items(for project: Project) -> [Item] {
         switch sortOder {
         case .optimized:
@@ -141,7 +145,7 @@ struct ProjectsView: View {
 
 struct ProjectsView_Previews: PreviewProvider {
     static var dataController = DataController(inMemory: true)
-    
+
     static var previews: some View {
         ProjectsView(showClosedProjects: false)
             .environment(\.managedObjectContext, dataController.container.viewContext)

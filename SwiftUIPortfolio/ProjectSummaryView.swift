@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ProjectSummaryView: View {
     @ObservedObject var project: Project
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("\(project.projectItems.count) items")
                 .font(.caption)
                 .foregroundColor(Color.secondary)
-            
+
             Text(project.projectTitle)
                 .font(.title2)
             ProgressView(value: project.completionAmount)

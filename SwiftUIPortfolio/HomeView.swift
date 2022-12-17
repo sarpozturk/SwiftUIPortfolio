@@ -11,15 +11,19 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var dataController: DataController
     static let tag: String? = "Home"
-    
-    @FetchRequest(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)], predicate: NSPredicate(format: "closed = false")) var projects: FetchedResults<Project>
-    
+
+    @FetchRequest(
+        entity: Project.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)],
+        predicate: NSPredicate(format: "closed = false"))
+    var projects: FetchedResults<Project>
+
     let items: FetchRequest<Item>
-    
+
     var projectRows: [GridItem] {
         return [GridItem(.fixed(100))]
     }
-    
+
     init() {
         let request: NSFetchRequest<Item> = Item.fetchRequest()
         let completedPredicate = NSPredicate(format: "completed = false")
@@ -35,7 +39,7 @@ struct HomeView: View {
         request.fetchOffset = 10
         items = FetchRequest(fetchRequest: request)
     }
-    
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -47,7 +51,7 @@ struct HomeView: View {
                         .padding([.horizontal, .top])
                         .fixedSize(horizontal: false, vertical: true)
                     }
-                    
+
                     VStack(alignment: .leading) {
                         ItemListView(title: "Up Next", items: items.wrappedValue.prefix(3))
                         ItemListView(title: "Explore More", items: items.wrappedValue.dropFirst(3))
