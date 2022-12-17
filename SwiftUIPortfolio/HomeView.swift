@@ -25,6 +25,8 @@ struct HomeView: View {
     }
 
     init() {
+        // Create a fetch request for first 10 high-priority items,
+        // which are from open projects and not completed items.
         let request: NSFetchRequest<Item> = Item.fetchRequest()
         let completedPredicate = NSPredicate(format: "completed = false")
         let openPredicate = NSPredicate(format: "project.closed = false")
