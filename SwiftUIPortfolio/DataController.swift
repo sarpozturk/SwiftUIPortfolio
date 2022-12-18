@@ -12,7 +12,7 @@ class DataController: ObservableObject {
     let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "Main")
+        container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
 
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
@@ -24,6 +24,18 @@ class DataController: ObservableObject {
             }
         }
     }
+
+    static let model: NSManagedObjectModel = {
+        guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
+            fatalError()
+        }
+
+        guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
+            fatalError()
+        }
+
+        return managedObjectModel
+    }()
 
     func createSampleData() throws {
         let viewContext = container.viewContext

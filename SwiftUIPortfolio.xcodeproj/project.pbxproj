@@ -36,6 +36,7 @@
 		37C8FD8F294E305400648DB0 /* AssetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD8E294E305400648DB0 /* AssetTest.swift */; };
 		37C8FD91294E3A8400648DB0 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD90294E3A8400648DB0 /* ProjectTests.swift */; };
 		37C8FD93294E420500648DB0 /* AwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD92294E420500648DB0 /* AwardTests.swift */; };
+		37C8FD95294E757D00648DB0 /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD94294E757D00648DB0 /* DevelopmentTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		37C8FD8E294E305400648DB0 /* AssetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTest.swift; sourceTree = "<group>"; };
 		37C8FD90294E3A8400648DB0 /* ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTests.swift; sourceTree = "<group>"; };
 		37C8FD92294E420500648DB0 /* AwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTests.swift; sourceTree = "<group>"; };
+		37C8FD94294E757D00648DB0 /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				37C8FD87294E2E0500648DB0 /* SwiftUIPortfolioTests.swift */,
 				37C8FD8E294E305400648DB0 /* AssetTest.swift */,
 				37C8FD90294E3A8400648DB0 /* ProjectTests.swift */,
+				37C8FD94294E757D00648DB0 /* DevelopmentTests.swift */,
 				37C8FD92294E420500648DB0 /* AwardTests.swift */,
 			);
 			path = SwiftUIPortfolioTests;
@@ -384,6 +387,7 @@
 				37C8FD93294E420500648DB0 /* AwardTests.swift in Sources */,
 				37C8FD88294E2E0500648DB0 /* SwiftUIPortfolioTests.swift in Sources */,
 				37C8FD91294E3A8400648DB0 /* ProjectTests.swift in Sources */,
+				37C8FD95294E757D00648DB0 /* DevelopmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
