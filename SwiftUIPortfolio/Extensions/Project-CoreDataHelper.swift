@@ -35,7 +35,7 @@ extension Project {
     }
 
     static var example: Project {
-        let dataController = DataController(inMemory: true)
+        let dataController = DataController.preview
         let context = dataController.container.viewContext
 
         let project = Project(context: context)
