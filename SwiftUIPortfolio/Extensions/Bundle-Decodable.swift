@@ -14,7 +14,7 @@ extension Bundle {
         dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate,
         keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys)
     -> T {
-        guard let url = Bundle.main.url(forResource: file, withExtension: nil) else {
+        guard let url = self.url(forResource: file, withExtension: nil) else {
             fatalError()
         }
 
