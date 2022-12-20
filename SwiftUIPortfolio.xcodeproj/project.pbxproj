@@ -41,6 +41,7 @@
 		37C8FD9A294F90B700648DB0 /* DecodableDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = 37C8FD99294F90B700648DB0 /* DecodableDictionary.json */; };
 		37C8FD9E294F912200648DB0 /* DecodableString.json in Resources */ = {isa = PBXBuildFile; fileRef = 37C8FD9D294F912200648DB0 /* DecodableString.json */; };
 		37C8FDA0294FA31C00648DB0 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD9F294FA31C00648DB0 /* PerformanceTests.swift */; };
+		37C8FDA2295212E500648DB0 /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FDA1295212E500648DB0 /* ProjectsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		37C8FD99294F90B700648DB0 /* DecodableDictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableDictionary.json; sourceTree = "<group>"; };
 		37C8FD9D294F912200648DB0 /* DecodableString.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableString.json; sourceTree = "<group>"; };
 		37C8FD9F294FA31C00648DB0 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
+		37C8FDA1295212E500648DB0 /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				37C8FD4929376AF000648DB0 /* ProjectsView.swift */,
+				37C8FDA1295212E500648DB0 /* ProjectsViewModel.swift */,
 				37C8FD552939503200648DB0 /* ProjectHeaderView.swift */,
 				37C8FD592939597300648DB0 /* EditProjectView.swift */,
 				37C8FD512938B8B100648DB0 /* EditItemView.swift */,
@@ -379,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C8FDA2295212E500648DB0 /* ProjectsViewModel.swift in Sources */,
 				37C8FD4A29376AF000648DB0 /* ProjectsView.swift in Sources */,
 				37C8FD562939503200648DB0 /* ProjectHeaderView.swift in Sources */,
 				37C8FD442937615100648DB0 /* Main.xcdatamodeld in Sources */,
