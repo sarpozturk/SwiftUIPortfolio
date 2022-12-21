@@ -8,20 +8,13 @@
 import SwiftUI
 
 struct ItemRowView: View {
-    @ObservedObject var project: Project
     @ObservedObject var item: Item
+    @StateObject private var viewModel: ViewModel
 
-    var icon: some View {
-        if item.completed == true {
-            return Image(systemName: "checkmark.circle")
-                .foregroundColor(Color(project.projectColor))
-        } else if item.priority == 3 {
-            return Image(systemName: "exclamationmark.triangle")
-                .foregroundColor(Color(project.projectColor))
-        } else {
-            return Image(systemName: "checkmark.circle")
-                .foregroundColor(.clear)
-        }
+    init(project: Project, item: Item) {
+        let viewModel = ViewModel(project: project, item: item)
+        _viewModel = StateObject(wrappedValue: viewModel)
+        self.item = item
     }
 
     var body: some View {
@@ -29,9 +22,10 @@ struct ItemRowView: View {
             EditItemView(item: item)
         } label: {
             Label {
-                Text("\(item.itemTitle)")
+                Text("\(viewModel.title)")
             } icon: {
-                icon
+                Image(systemName: viewModel.iconName)
+                    .foregroundColor(viewModel.color.map { Color($0) } ?? .clear)
             }
         }
     }
