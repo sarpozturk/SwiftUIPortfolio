@@ -45,7 +45,7 @@ extension HomeView {
             itemRequest.sortDescriptors = [
                 NSSortDescriptor(keyPath: \Item.priority, ascending: false)
             ]
-            itemRequest.fetchOffset = 10
+            itemRequest.fetchLimit = 10
 
             projectController = NSFetchedResultsController(
                 fetchRequest: projectRequest,

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditProjectView: View {
-    let project: Project
+    @ObservedObject var project: Project
     let columns: [GridItem] = [GridItem(.adaptive(minimum: 44))]
 
     @State private var title: String
