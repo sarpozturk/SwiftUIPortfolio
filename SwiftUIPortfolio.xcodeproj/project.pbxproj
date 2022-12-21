@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373ED756295339B6005ECCDB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373ED755295339B6005ECCDB /* HomeViewModel.swift */; };
 		37C8FD352937607F00648DB0 /* SwiftUIPortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD342937607F00648DB0 /* SwiftUIPortfolioApp.swift */; };
 		37C8FD372937607F00648DB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD362937607F00648DB0 /* ContentView.swift */; };
 		37C8FD392937608000648DB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C8FD382937608000648DB0 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		373ED755295339B6005ECCDB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		37C8FD312937607F00648DB0 /* SwiftUIPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C8FD342937607F00648DB0 /* SwiftUIPortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPortfolioApp.swift; sourceTree = "<group>"; };
 		37C8FD362937607F00648DB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				37C8FD4729376AD400648DB0 /* HomeView.swift */,
+				373ED755295339B6005ECCDB /* HomeViewModel.swift */,
 				37C8FD712948B96C00648DB0 /* ItemListView.swift */,
 				37C8FD732948BA3C00648DB0 /* ProjectSummaryView.swift */,
 			);
@@ -398,6 +401,7 @@
 				37C8FD4C2938B48300648DB0 /* Project-CoreDataHelper.swift in Sources */,
 				37C8FD372937607F00648DB0 /* ContentView.swift in Sources */,
 				37C8FD722948B96C00648DB0 /* ItemListView.swift in Sources */,
+				373ED756295339B6005ECCDB /* HomeViewModel.swift in Sources */,
 				37C8FD522938B8B100648DB0 /* EditItemView.swift in Sources */,
 				37C8FD4829376AD400648DB0 /* HomeView.swift in Sources */,
 				37C8FD60293B9AA500648DB0 /* Award.swift in Sources */,
