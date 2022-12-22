@@ -8,29 +8,21 @@
 import SwiftUI
 
 struct EditProjectView: View {
-    @ObservedObject var project: Project
-    let columns: [GridItem] = [GridItem(.adaptive(minimum: 44))]
-
-    @State private var title: String
-    @State private var detail: String
-    @State private var color: String
+    @StateObject var viewModel: ViewModel
     @State private var showDeleteConfirm: Bool = false
 
-    @EnvironmentObject var dataController: DataController
-    @Environment(\.presentationMode) var presentationMode
+    let columns: [GridItem] = [GridItem(.adaptive(minimum: 44))]
 
-    init(project: Project) {
-        self.project = project
-        _title = State(wrappedValue: project.projectTitle)
-        _detail = State(wrappedValue: project.projectDetail)
-        _color = State(wrappedValue: project.projectColor)
+    init(dataController: DataController, project: Project) {
+        let viewModel = ViewModel(dataController: dataController, project: project)
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
 
     var body: some View {
         Form {
             Section(header: Text("Basic Settings")) {
-                TextField("Title", text: $title.onCreate(update))
-                TextField("Detail of the project", text: $detail.onCreate(update))
+                TextField("Title", text: $viewModel.title)
+                TextField("Detail of the project", text: $viewModel.detail)
             }
 
             Section(header: Text("Custom Project Color")) {
@@ -41,8 +33,8 @@ struct EditProjectView: View {
 
             // swiftlint:disable:next line_length
             Section(footer: Text("Closing a project moves it from the Open to Closed tab; deleting removes it entirely")) {
-                Button(project.closed ? "Reopen this project" : "Close this project") {
-                    project.closed.toggle()
+                Button(viewModel.project.closed ? "Reopen this project" : "Close this project") {
+                    viewModel.project.closed.toggle()
                 }
 
                 Button("Delete this project") {
@@ -52,25 +44,14 @@ struct EditProjectView: View {
             }
         }
         .navigationTitle("Edit Project")
-        .onDisappear(perform: dataController.save)
+        .onDisappear(perform: viewModel.save)
         .alert(isPresented: $showDeleteConfirm) {
             Alert(
                 title: Text("Delete Project?"),
-                primaryButton: .default(Text("OK"), action: delete),
+                primaryButton: .default(Text("OK"), action: viewModel.delete),
                 secondaryButton: .cancel()
             )
         }
-    }
-
-    func update() {
-        project.title = title
-        project.detail = detail
-        project.color = color
-    }
-
-    func delete() {
-        dataController.delete(project)
-        presentationMode.wrappedValue.dismiss()
     }
 
     func colorButton(for item: String) -> some View {
@@ -79,21 +60,21 @@ struct EditProjectView: View {
                 .aspectRatio(1, contentMode: .fit)
                 .cornerRadius(6)
 
-            if color == item {
+            if viewModel.color == item {
                 Image(systemName: "checkmark.circle")
                     .foregroundColor(.white)
                     .font(.largeTitle)
             }
         }
         .onTapGesture {
-            color = item
-            update()
+            viewModel.color = item
+            viewModel.update()
         }
     }
 }
 
 struct EditProjectView_Previews: PreviewProvider {
     static var previews: some View {
-        EditProjectView(project: Project.example)
+        EditProjectView(dataController: DataController.preview, project: Project.example)
     }
 }

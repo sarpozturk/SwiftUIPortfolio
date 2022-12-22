@@ -22,7 +22,7 @@ struct ProjectsView: View {
     var projectsList: some View {
         List {
             ForEach(viewModel.projects) { project in
-                Section(header: ProjectHeaderView(project: project)) {
+                Section(header: ProjectHeaderView(dataController: viewModel.dataController, project: project)) {
                     ForEach(viewModel.items(for: project)) { item in
                         ItemRowView(project: project, item: item)
                     }

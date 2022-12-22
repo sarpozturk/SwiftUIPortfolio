@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		373ED756295339B6005ECCDB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373ED755295339B6005ECCDB /* HomeViewModel.swift */; };
 		373ED75829535515005ECCDB /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373ED75729535515005ECCDB /* ItemRowViewModel.swift */; };
+		373ED75A29544C98005ECCDB /* EditProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373ED75929544C98005ECCDB /* EditProjectViewModel.swift */; };
 		37C8FD352937607F00648DB0 /* SwiftUIPortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD342937607F00648DB0 /* SwiftUIPortfolioApp.swift */; };
 		37C8FD372937607F00648DB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8FD362937607F00648DB0 /* ContentView.swift */; };
 		37C8FD392937608000648DB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C8FD382937608000648DB0 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		373ED755295339B6005ECCDB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		373ED75729535515005ECCDB /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
+		373ED75929544C98005ECCDB /* EditProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectViewModel.swift; sourceTree = "<group>"; };
 		37C8FD312937607F00648DB0 /* SwiftUIPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C8FD342937607F00648DB0 /* SwiftUIPortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPortfolioApp.swift; sourceTree = "<group>"; };
 		37C8FD362937607F00648DB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				37C8FDA1295212E500648DB0 /* ProjectsViewModel.swift */,
 				37C8FD552939503200648DB0 /* ProjectHeaderView.swift */,
 				37C8FD592939597300648DB0 /* EditProjectView.swift */,
+				373ED75929544C98005ECCDB /* EditProjectViewModel.swift */,
 				37C8FD512938B8B100648DB0 /* EditItemView.swift */,
 				37C8FD4F2938B76700648DB0 /* ItemRowView.swift */,
 				373ED75729535515005ECCDB /* ItemRowViewModel.swift */,
@@ -402,6 +405,7 @@
 				37C8FD542938BF1200648DB0 /* Binding-OnCreate.swift in Sources */,
 				37C8FD62293B9C0500648DB0 /* AwardsView.swift in Sources */,
 				37C8FD4E2938B5D400648DB0 /* Item-CoreDataHelper.swift in Sources */,
+				373ED75A29544C98005ECCDB /* EditProjectViewModel.swift in Sources */,
 				37C8FD4C2938B48300648DB0 /* Project-CoreDataHelper.swift in Sources */,
 				37C8FD372937607F00648DB0 /* ContentView.swift in Sources */,
 				37C8FD722948B96C00648DB0 /* ItemListView.swift in Sources */,

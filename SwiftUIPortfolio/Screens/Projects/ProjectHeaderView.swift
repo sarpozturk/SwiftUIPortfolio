@@ -9,6 +9,12 @@ import SwiftUI
 
 struct ProjectHeaderView: View {
     @ObservedObject var project: Project
+    let dataController: DataController
+
+    init(dataController: DataController, project: Project) {
+        self.dataController = dataController
+        self.project = project
+    }
 
     var body: some View {
         HStack {
@@ -20,7 +26,7 @@ struct ProjectHeaderView: View {
 
             Spacer()
 
-            NavigationLink(destination: EditProjectView(project: project)) {
+            NavigationLink(destination: EditProjectView(dataController: dataController, project: project)) {
                 Image(systemName: "square.and.pencil")
                     .imageScale(.large)
             }
@@ -31,6 +37,6 @@ struct ProjectHeaderView: View {
 
 struct ProjectHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectHeaderView(project: Project.example)
+        ProjectHeaderView(dataController: DataController.preview, project: Project.example)
     }
 }
