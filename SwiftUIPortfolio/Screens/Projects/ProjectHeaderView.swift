@@ -9,10 +9,9 @@ import SwiftUI
 
 struct ProjectHeaderView: View {
     @ObservedObject var project: Project
-    let dataController: DataController
+    @EnvironmentObject var dataController: DataController
 
-    init(dataController: DataController, project: Project) {
-        self.dataController = dataController
+    init(project: Project) {
         self.project = project
     }
 
@@ -37,6 +36,7 @@ struct ProjectHeaderView: View {
 
 struct ProjectHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectHeaderView(dataController: DataController.preview, project: Project.example)
+        ProjectHeaderView(project: Project.example)
+            .environmentObject(DataController.preview)
     }
 }
