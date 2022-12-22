@@ -43,6 +43,7 @@ struct ProjectsView: View {
             }
         }
         .listStyle(.insetGrouped)
+        .accessibilityIdentifier("projectsList")
     }
 
     var addProjectToolbarItem: some ToolbarContent {
