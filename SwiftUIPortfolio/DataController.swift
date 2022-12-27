@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import CoreSpotlight
 
 class DataController: ObservableObject {
     let container: NSPersistentCloudKitContainer
@@ -81,6 +82,12 @@ class DataController: ObservableObject {
     }
 
     func delete(_ object: NSManagedObject) {
+        let id = object.objectID.uriRepresentation().absoluteString
+        if object is Item {
+            CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
+        } else {
+            CSSearchableIndex.default().deleteSearchableItems(withDomainIdentifiers: [id])
+        }
         container.viewContext.delete(object)
     }
 
@@ -113,5 +120,36 @@ class DataController: ObservableObject {
         default:
             return false
         }
+    }
+
+    func update(_ item: Item) {
+        let itemId = item.objectID.uriRepresentation().absoluteString
+        let projectId = item.project?.objectID.uriRepresentation().absoluteString
+
+        let attributeSet = CSSearchableItemAttributeSet(contentType: .text)
+        attributeSet.title = item.itemTitle
+        attributeSet.contentDescription = item.itemDetail
+
+        let searchableItem = CSSearchableItem(
+            uniqueIdentifier: itemId,
+            domainIdentifier: projectId,
+            attributeSet: attributeSet
+        )
+
+        CSSearchableIndex.default().indexSearchableItems([searchableItem])
+
+        save()
+    }
+
+    func item(with identifier: String) -> Item? {
+        guard let url = URL(string: identifier) else {
+            return nil
+        }
+
+        guard let id = container.persistentStoreCoordinator.managedObjectID(forURIRepresentation: url) else {
+            return nil
+        }
+
+        return try? container.viewContext.existingObject(with: id) as? Item
     }
 }
