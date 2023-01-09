@@ -42,7 +42,7 @@ class ExtensionTests: BaseTestCase {
             set: { storedData = $0 }
         )
 
-        let changedBinding = binding.onCreate(functionToCall)
+        let changedBinding = binding.onChange(functionToCall)
         // When
         changedBinding.wrappedValue = "changed"
 

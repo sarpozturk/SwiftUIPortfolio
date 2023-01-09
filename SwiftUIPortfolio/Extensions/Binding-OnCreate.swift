@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 extension Binding {
-    func onCreate(_ handler: @escaping () -> Void) -> Binding<Value> {
+    func onChange(_ handler: @escaping () -> Void) -> Binding<Value> {
         Binding(
             get: {
                 self.wrappedValue

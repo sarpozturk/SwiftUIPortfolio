@@ -28,12 +28,12 @@ struct EditItemView: View {
     var body: some View {
         Form {
             Section(header: Text("Basic Settings")) {
-                TextField("Title", text: $title.onCreate(update))
-                TextField("Detail", text: $detail.onCreate(update))
+                TextField("Title", text: $title.onChange(update))
+                TextField("Detail", text: $detail.onChange(update))
             }
 
             Section(header: Text("Priority")) {
-                Picker("Prioirt", selection: $priority.onCreate(update)) {
+                Picker("Prioirt", selection: $priority.onChange(update)) {
                     Text("Low").tag(1)
                     Text("Medium").tag(2)
                     Text("High").tag(3)
@@ -42,7 +42,7 @@ struct EditItemView: View {
             }
 
             Section {
-                Toggle("Mark Completed", isOn: $completed.onCreate(update))
+                Toggle("Mark Completed", isOn: $completed.onChange(update))
             }
         }
         .navigationTitle("Edit Item")

@@ -31,6 +31,27 @@ struct EditProjectView: View {
                 }
             }
 
+            Section(header: Text("Project Reminder")) {
+                Toggle("Show reminder", isOn: $viewModel.remindMe.animation().onChange(viewModel.update))
+                    .alert(isPresented: $viewModel.showingNotificationsError) {
+                        Alert(
+                            title: Text("Warning!"),
+                            message: Text("Please check you have notifications enabled."),
+                            primaryButton: .default(Text("Check App Settings"),
+                                                    action: showAppSettings),
+                            secondaryButton: .cancel()
+                        )
+                    }
+
+                if viewModel.remindMe {
+                    DatePicker(
+                        "Reminder Time",
+                        selection: $viewModel.reminderTime.onChange(viewModel.update),
+                        displayedComponents: .hourAndMinute
+                    )
+                }
+            }
+
             // swiftlint:disable:next line_length
             Section(footer: Text("Closing a project moves it from the Open to Closed tab; deleting removes it entirely")) {
                 Button(viewModel.project.closed ? "Reopen this project" : "Close this project") {
@@ -69,6 +90,16 @@ struct EditProjectView: View {
         .onTapGesture {
             viewModel.color = item
             viewModel.update()
+        }
+    }
+
+    func showAppSettings() {
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+
+        if UIApplication.shared.canOpenURL(settingsURL) {
+            UIApplication.shared.open(settingsURL)
         }
     }
 }
